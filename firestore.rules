@@ -1,0 +1,64 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Primitives & Helpers
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+    function isSignedIn() { return request.auth != null; }
+    function isVerifiedUser() { 
+      return isSignedIn() && request.auth.token.email_verified == true; 
+    }
+    
+    // Entity Schema Validators
+    function isValidUserProfile(data) {
+      return data.keys().hasAll(['name', 'email', 'goal', 'streak', 'studyMinutes', 'joinDate', 'savedNotes', 'solvedCount'])
+        && data.keys().size() == 8
+        && data.name is string && data.name.size() <= 150
+        && data.email is string && data.email.size() <= 150
+        && data.goal is string && data.goal.size() <= 300
+        && data.streak is int && data.streak >= 0
+        && data.studyMinutes is int && data.studyMinutes >= 0
+        && data.joinDate is string && data.joinDate.size() <= 100
+        && data.savedNotes is list && data.savedNotes.size() <= 50
+        && data.solvedCount is int && data.solvedCount >= 0;
+    }
+    
+    function isValidPlannerItem(data) {
+      return data.keys().hasAll(['id', 'title', 'time', 'completed'])
+        && data.keys().size() == 4
+        && data.id is string && data.id.size() <= 128
+        && data.title is string && data.title.size() <= 300
+        && data.time is string && data.time.size() <= 100
+        && data.completed is bool;
+    }
+
+    // Collection Security matched patterns
+    match /users/{userId} {
+      allow read: if isVerifiedUser() && userId == request.auth.uid;
+      allow create: if isVerifiedUser() && userId == request.auth.uid && isValidUserProfile(incoming());
+      
+      // Update allowing actions using immutable checks
+      allow update: if isVerifiedUser() && userId == request.auth.uid 
+                    && isValidUserProfile(incoming())
+                    && incoming().email == existing().email;
+      
+      allow delete: if false; // Profiles cannot be hard deleted via clients
+      
+      match /planner/{itemId} {
+        allow read: if isVerifiedUser() && userId == request.auth.uid;
+        allow create, update: if isVerifiedUser() && userId == request.auth.uid 
+                              && isValidId(itemId) 
+                              && isValidPlannerItem(incoming());
+        allow delete: if isVerifiedUser() && userId == request.auth.uid && isValidId(itemId);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "OdiaLab Coaching",
+  "description": "Mobile-first online education and coaching platform for global and state comparative exams in Odisha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

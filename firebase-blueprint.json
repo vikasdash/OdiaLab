@@ -1,0 +1,79 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information containing progress statistics and settings.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The displayed name of the user."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The account email."
+        },
+        "goal": {
+          "type": "string",
+          "description": "The user's educational goals or objectives."
+        },
+        "streak": {
+          "type": "integer",
+          "description": "Daily study streak in days."
+        },
+        "studyMinutes": {
+          "type": "integer",
+          "description": "Total spent studying in minutes."
+        },
+        "joinDate": {
+          "type": "string",
+          "description": "Account creation month representation."
+        },
+        "savedNotes": {
+          "type": "array",
+          "description": "List of bookmarked revision notes."
+        },
+        "solvedCount": {
+          "type": "integer",
+          "description": "Total quiz questions correctly solved."
+        }
+      },
+      "required": ["name", "email", "goal", "streak", "studyMinutes", "joinDate", "savedNotes", "solvedCount"]
+    },
+    "PlannerItem": {
+      "title": "PlannerItem",
+      "description": "A single checklist or schedule item for daily learning tracker.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A unique identifier for the planner item."
+        },
+        "title": {
+          "type": "string",
+          "description": "The name or subject description of the task."
+        },
+        "time": {
+          "type": "string",
+          "description": "The scheduled time tag."
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Completion state flag."
+        }
+      },
+      "required": ["id", "title", "time", "completed"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "The user profile document which persists core learning stats."
+    },
+    "users/{userId}/planner/{itemId}": {
+      "schema": "PlannerItem",
+      "description": "A study planner list subcollection representing items for each individual user."
+    }
+  }
+}
