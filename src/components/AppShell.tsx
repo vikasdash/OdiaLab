@@ -111,47 +111,47 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           )}
 
           {/* 1. Sleek Status Bar */}
-          <div className="flex justify-between items-center px-8 pt-6 pb-2 select-none text-slate-900 shrink-0 z-40 bg-white">
-            <span className="text-xs font-bold font-mono text-slate-950">{deviceTime ? deviceTime.split(" ")[0] : "9:41"}</span>
+          <div className="flex justify-between items-center px-8 pt-6 pb-2 select-none text-white shrink-0 z-40 bg-primary-500">
+            <span className="text-xs font-bold font-mono text-white">{deviceTime ? deviceTime.split(" ")[0] : "9:41"}</span>
             <div className="flex items-center space-x-1.5">
-              <span className="text-[9px] font-bold bg-accent-100 text-amber-900 px-2 py-0.5 rounded-full font-sans tracking-wide border border-accent-500/20">
+              <span className="text-[10px] font-bold bg-accent-500 text-slate-950 px-2.5 py-0.5 rounded-full font-sans tracking-wide shadow-xs">
                 🔥 {streak} Days
               </span>
-              <div className="w-4 h-4 rounded-full border border-slate-350 flex items-center justify-center">
-                <Wifi size={9} className="text-slate-800" />
+              <div className="w-4 h-4 rounded-full border border-primary-200 flex items-center justify-center">
+                <Wifi size={9} className="text-white" />
               </div>
-              <div className="w-4 h-4 rounded-full border border-slate-350 flex items-center justify-center">
-                <Battery size={9} className="text-slate-800" />
+              <div className="w-4 h-4 rounded-full border border-primary-200 flex items-center justify-center">
+                <Battery size={9} className="text-white" />
               </div>
             </div>
           </div>
 
           {/* 2. Sleek Branding Header */}
-          <header className="px-6 py-4 bg-white border-b border-slate-100 shrink-0 z-35 flex justify-between items-center">
+          <header className="px-6 py-4 bg-primary-500 border-b border-primary-650 shrink-0 z-35 flex justify-between items-center text-white">
             <div>
-              <h1 className="text-2xl font-black text-slate-900 tracking-tight font-display flex items-center gap-1.5">
+              <h1 className="text-2xl font-black text-white tracking-tight font-display flex items-center gap-1.5">
                 OdiaLab
-                <span className="text-[9px] uppercase tracking-widest font-mono font-bold text-primary-600 bg-primary-50 px-2 py-0.5 rounded-md">
+                <span className="text-[9px] uppercase tracking-widest font-mono font-bold text-accent-500 bg-primary-700 px-2 py-0.5 rounded-md">
                   HUB
                 </span>
               </h1>
-              <p className="text-xs text-slate-500 font-semibold tracking-wide mt-0.5">Global Learning Hub</p>
+              <p className="text-xs text-primary-100 font-semibold tracking-wide mt-0.5">Global Learning Hub</p>
             </div>
             
             <div className="flex items-center gap-2">
               <button 
                 onClick={() => setShowNotificationAlert(!showNotificationAlert)}
-                className="relative p-2 rounded-full hover:bg-slate-55 border border-slate-150 transition-colors text-slate-800 cursor-pointer"
+                className="relative p-2 rounded-full hover:bg-primary-600 border border-primary-400/50 transition-colors text-white cursor-pointer"
               >
                 <Bell size={16} />
                 {showNotificationAlert && (
-                  <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-white animate-bounce"></span>
+                  <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-primary-500 animate-bounce"></span>
                 )}
               </button>
 
               <div 
                 onClick={() => setActiveTab("profile")}
-                className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-xs border-2 border-primary-50 hover:scale-102 transition-all cursor-pointer overflow-hidden bg-primary-600 hover:bg-primary-700 text-white"
+                className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-xs border-2 border-primary-200 hover:scale-102 transition-all cursor-pointer overflow-hidden bg-white text-primary-600"
               >
                 {user?.photoURL ? (
                   <img src={user.photoURL} alt="Avatar" referrerPolicy="no-referrer" className="w-full h-full object-cover" />

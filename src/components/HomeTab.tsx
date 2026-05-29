@@ -32,21 +32,21 @@ export default function HomeTab({
       subtitle: "Match with active aspirants 1-on-1 to practice mock question papers",
       badge: "Partners Online",
       tag: "ossc-peer-room",
-      color: "from-indigo-600 via-indigo-700 to-indigo-800",
+      color: "from-primary-600 via-primary-700 to-emerald-800",
     },
     {
       title: "State OPSC OAS Pair Rooms 🏛️",
       subtitle: "Brainstorm Mains essay answers & state history GK with verified peer experts",
       badge: "Serious Aspirants",
       tag: "opsc-peer-room",
-      color: "from-slate-900 to-indigo-950",
+      color: "from-slate-900 to-emerald-950",
     },
     {
       title: "Odia Guru AI Doubts Assistant ✨",
       subtitle: "Get explanations on grammar rules & math shortcuts in native Odia 24/7",
       badge: "AI Grounded",
       tag: "ai",
-      color: "from-indigo-900 via-indigo-950 to-slate-900",
+      color: "from-emerald-900 via-slate-900 to-emerald-950",
     }
   ];
 

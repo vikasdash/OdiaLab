@@ -181,7 +181,7 @@ export default function CoursesTab({
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex gap-3">
-                    <div className="w-11 h-11 bg-indigo-50 text-2xl flex items-center justify-center rounded-xl ring-1 ring-slate-100 shrink-0">
+                    <div className="w-11 h-11 bg-primary-50/80 text-2xl flex items-center justify-center rounded-xl ring-1 ring-slate-100 shrink-0">
                       {course.thumbnail}
                     </div>
                     <div>
@@ -347,7 +347,7 @@ export default function CoursesTab({
                   {/* Live Points rendered simulated */}
                   <svg className="absolute inset-0 pointer-events-none w-full h-full">
                     {points.map((p, i) => (
-                      <circle key={i} cx={p.x} cy={p.y} r={3} fill="#4f46e5" />
+                      <circle key={i} cx={p.x} cy={p.y} r={3} fill="#0f9f3e" />
                     ))}
                   </svg>
                 </div>
@@ -403,7 +403,7 @@ export default function CoursesTab({
                 <textarea
                   value={scratchpadText}
                   onChange={(e) => setScratchpadText(e.target.value)}
-                  className="w-full h-40 bg-indigo-50/40 text-xs p-3 rounded-xl border border-slate-200 font-mono focus:bg-white"
+                  className="w-full h-40 bg-primary-50/20 text-xs p-3 rounded-xl border border-slate-200 font-mono focus:bg-white"
                 />
               </div>
             )}
