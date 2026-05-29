@@ -6,12 +6,12 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-primary-50: #e8faf4; /* Light Mint background (#e8faf4) */
-  --color-primary-100: #def294; /* Light lime green (#def294) */
-  --color-primary-200: #c1d96c; /* Vibrant leaf lime green (#c1d96c) */
-  --color-primary-500: #53a687; /* Master Brand Teal / Emerald (#53a687) */
-  --color-primary-600: #3d8b6e; /* Dynamic corporate green-teal */
-  --color-primary-700: #24664c; /* Deep focus forest teal */
+  --color-primary-50: #f0f7f4; /* Light forest cream / minty white tint */
+  --color-primary-100: #d3ecd5; /* Soft pastel emerald sage */
+  --color-primary-200: #a3d2a7; /* Lush classic foliage border */
+  --color-primary-500: #1e5e3a; /* Beautiful deep rich forest green (#1e5e3a) */
+  --color-primary-600: #144529; /* Deeper pine/forest tone */
+  --color-primary-700: #0b2918; /* Regal deep focus jungle obsidian green */
   
   --color-accent-50: #fdf6f0;
   --color-accent-100: #fdf0e6;
