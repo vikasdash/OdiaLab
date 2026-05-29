@@ -90,9 +90,9 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
         <div 
           className={`bg-white text-slate-900 transition-all duration-300 relative ${
             isFullscreenMode 
-              ? "w-full max-w-4xl h-[100dvh] md:h-[92vh] rounded-none md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl" 
-              : "w-full md:w-[375px] h-[100dvh] md:h-[720px] rounded-none md:rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl"
-          } flex flex-col overflow-hidden`}
+              ? "w-full max-w-4xl h-auto md:h-[92vh] rounded-none md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl overflow-y-visible md:overflow-hidden" 
+              : "w-full md:w-[375px] h-auto md:h-[720px] rounded-none md:rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl overflow-y-visible md:overflow-hidden"
+          } flex flex-col`}
         >
           
           {/* Top Notch Area on Simulated Smartphone Frame */}
@@ -111,7 +111,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           )}
 
           {/* 1. Sleek Status Bar */}
-          <div className="flex justify-between items-center px-8 pt-6 pb-2 select-none text-white shrink-0 z-40 bg-primary-500">
+          <div className="hidden md:flex justify-between items-center px-8 pt-6 pb-2 select-none text-white shrink-0 z-40 bg-primary-500">
             <span className="text-xs font-bold font-mono text-white">{deviceTime ? deviceTime.split(" ")[0] : "9:41"}</span>
             <div className="flex items-center space-x-1.5">
               <span className="text-[10px] font-bold bg-accent-500 text-slate-950 px-2.5 py-0.5 rounded-full font-sans tracking-wide shadow-xs">
@@ -127,7 +127,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           </div>
 
           {/* 2. Sleek Branding Header */}
-          <header className="px-6 py-4 bg-primary-500 border-b border-primary-650 shrink-0 z-35 flex justify-between items-center text-white">
+          <header className="sticky md:relative top-0 left-0 right-0 px-6 py-4 bg-primary-500 border-b border-primary-650 shrink-0 z-35 flex justify-between items-center text-white">
             <div>
               <h1 className="text-2xl font-black text-white tracking-tight font-display flex items-center gap-1.5">
                 OdiaLab
@@ -181,7 +181,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           )}
 
           {/* 3. Screen Scrollable Content Body */}
-          <main className="flex-1 overflow-y-auto bg-slate-50 relative flex flex-col pb-safe">
+          <main className="flex-1 overflow-y-visible md:overflow-y-auto bg-slate-50 relative flex flex-col pb-safe">
             {children}
           </main>
 
