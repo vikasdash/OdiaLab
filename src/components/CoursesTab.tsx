@@ -147,8 +147,8 @@ export default function CoursesTab({
         <p className="text-xs text-slate-500">Collaborate with active Odisha candidates in dedicated private matching rooms.</p>
       </div>
 
-      <div className="bg-emerald-50 border border-emerald-100 rounded-xl px-3 py-2 text-[11px] text-emerald-800 font-semibold flex items-center gap-2">
-        <Users size={16} className="text-emerald-600 shrink-0" />
+      <div className="bg-primary-50/80 border border-primary-100 rounded-xl px-3 py-2 text-[11px] text-primary-800 font-semibold flex items-center gap-2">
+        <Users size={16} className="text-primary-600 shrink-0" />
         <span>No group batches or overhead classes. OdiaLab is 100% focused on 1-on-1 peer exchange.</span>
       </div>
 
@@ -211,7 +211,7 @@ export default function CoursesTab({
                     <Users size={12} />
                     {course.studentsCount} Peers Active
                   </span>
-                  <span className="text-emerald-600 font-extrabold ml-auto font-sans text-[10px] uppercase">
+                  <span className="text-primary-600 font-extrabold ml-auto font-sans text-[10px] uppercase">
                     {course.price}
                   </span>
                 </div>
@@ -221,7 +221,7 @@ export default function CoursesTab({
                   {isEnrolled ? (
                     <button
                       onClick={() => setSelectedCourse(course)}
-                      className="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                      className="w-full py-2 bg-primary-600 hover:bg-primary-700 text-white text-[11px] font-bold rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
                     >
                       <Video size={12} />
                       <span>Re-Enter Private Match Space</span>
@@ -272,18 +272,18 @@ export default function CoursesTab({
             <div className="bg-slate-900 text-white rounded-2xl p-3 flex flex-col gap-2 relative shadow-inner">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 bg-primary-600 rounded-full flex items-center justify-center font-bold text-xs ring-2 ring-emerald-500">
+                  <div className="w-9 h-9 bg-primary-600 rounded-full flex items-center justify-center font-bold text-xs ring-2 ring-primary-400">
                     RR
                   </div>
                   <div>
                     <h5 className="text-xs font-bold">Rashmi Ranjan</h5>
-                    <p className="text-[9px] text-emerald-450 font-mono flex items-center gap-1 mt-0.5">
+                    <p className="text-[9px] text-primary-200 font-mono flex items-center gap-1 mt-0.5">
                       <Volume2 size={10} className="animate-pulse" />
                       Audio connected & High-res webcam live
                     </p>
                   </div>
                 </div>
-                <span className="bg-emerald-600 text-white font-bold text-[8px] px-1.5 py-0.5 rounded animate-pulse">1-TO-1</span>
+                <span className="bg-primary-500 text-white font-bold text-[8px] px-1.5 py-0.5 rounded animate-pulse">1-TO-1</span>
               </div>
               <p className="text-[10px] text-slate-300 italic leading-snug bg-slate-800/80 p-2 rounded-lg border border-slate-705">
                 "Study buddy matched safely relative to your search goals."
@@ -436,7 +436,7 @@ export default function CoursesTab({
                 alert("👍 Review notes from session committed to memory dashboard! Streak score accounted.");
                 setSelectedCourse(null);
               }}
-              className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-xl text-center text-xs active:scale-95 transition-transform cursor-pointer"
+              className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-xl text-center text-xs active:scale-95 transition-transform cursor-pointer"
             >
               Finish Study Session & Save Profile
             </button>

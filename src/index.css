@@ -6,12 +6,12 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-primary-50: #f4fbf7;
-  --color-primary-100: #e6f7ef;
-  --color-primary-200: #c2eed9;
-  --color-primary-500: #0ea85e; /* Vibrant, modern educational Mint Forest Green */
-  --color-primary-600: #0b8a4d; /* Dynamic Academic Dark Green */
-  --color-primary-700: #06542f; /* Premium Forest Ash Green */
+  --color-primary-50: #f0f7fc;
+  --color-primary-100: #e1f0fa;
+  --color-primary-200: #b9daf3;
+  --color-primary-500: #106ebe; /* Elegant Academic Brand Blue */
+  --color-primary-600: #0f62ab; /* Dynamic Deep Blue */
+  --color-primary-700: #0c4f8a; /* Premium Dark Indigo-Blue */
   
   --color-accent-50: #fffbeb;
   --color-accent-100: #fef3c7;

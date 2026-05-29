@@ -32,21 +32,21 @@ export default function HomeTab({
       subtitle: "Match with active aspirants 1-on-1 to practice mock question papers",
       badge: "Partners Online",
       tag: "ossc-peer-room",
-      color: "from-primary-600 via-primary-700 to-emerald-800",
+      color: "from-primary-600 via-primary-700 to-indigo-800",
     },
     {
       title: "State OPSC OAS Pair Rooms 🏛️",
       subtitle: "Brainstorm Mains essay answers & state history GK with verified peer experts",
       badge: "Serious Aspirants",
       tag: "opsc-peer-room",
-      color: "from-slate-900 to-emerald-950",
+      color: "from-slate-900 to-primary-950",
     },
     {
       title: "Odia Guru AI Doubts Assistant ✨",
       subtitle: "Get explanations on grammar rules & math shortcuts in native Odia 24/7",
       badge: "AI Grounded",
       tag: "ai",
-      color: "from-emerald-900 via-slate-900 to-emerald-950",
+      color: "from-primary-900 via-slate-900 to-indigo-950",
     }
   ];
 
@@ -172,28 +172,28 @@ export default function HomeTab({
 
 
       {/* 4. Active Peer-to-Peer Booking Match Alert */}
-      <div className="bg-gradient-to-r from-teal-50 to-emerald-50 border border-emerald-100 rounded-2xl p-4 flex flex-col gap-3">
+      <div className="bg-gradient-to-r from-primary-50 to-indigo-50 border border-primary-200 rounded-2xl p-4 flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5">
-            <UserCheck className="text-emerald-600 animate-pulse" size={18} />
+            <UserCheck className="text-primary-600 animate-pulse" size={18} />
             <div>
-              <h5 className="font-display font-bold text-xs text-emerald-950">1-on-1 Study Match Available</h5>
-              <p className="text-[10px] text-emerald-600 font-medium">Peer: Rashmi Ranjan (OSSC CGL Aspirant)</p>
+              <h5 className="font-display font-bold text-xs text-primary-950">1-on-1 Study Match Available</h5>
+              <p className="text-[10px] text-primary-600 font-medium">Peer: Rashmi Ranjan (OSSC CGL Aspirant)</p>
             </div>
           </div>
-          <span className="bg-emerald-500 text-white font-bold text-[9px] px-2 py-0.5 rounded-full animate-bounce">ONLINE</span>
+          <span className="bg-primary-500 text-white font-bold text-[9px] px-2 py-0.5 rounded-full animate-bounce">ONLINE</span>
         </div>
         
-        <div className="bg-white/80 p-3 rounded-xl border border-emerald-100/30">
+        <div className="bg-white/80 p-3 rounded-xl border border-primary-100/30">
           <p className="text-xs font-bold text-slate-950">📍 Topics: ଓଡ଼ିଆ ବ୍ୟାକରଣ (ସମାସ ରୁଲ୍ସ) & State History Quiz</p>
           <div className="flex items-center justify-between mt-2 pt-1 border-t border-slate-100 text-[10px] text-slate-500 font-medium">
-            <span>🔴 1-to-1 Instant Private Matching slot</span>
+            <span>🔵 1-to-1 Instant Private Matching slot</span>
             <button 
               onClick={() => {
                 setProfile(p => ({ ...p, studyMinutes: p.studyMinutes + 35 }));
                 alert("🔊 Connecting to Rashmi Ranjan in private 1-on-1 audio/video peer session! You received +35 study goal mins.");
               }}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-1 px-2.5 rounded-lg active:scale-95 transition-transform cursor-pointer"
+              className="bg-primary-600 hover:bg-primary-700 text-white font-bold py-1 px-2.5 rounded-lg active:scale-95 transition-transform cursor-pointer"
             >
               Match 1-on-1
             </button>

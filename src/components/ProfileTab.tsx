@@ -99,9 +99,9 @@ export default function ProfileTab({
       <div className="bg-white rounded-2xl border border-slate-150 p-4 shadow-xs flex flex-col gap-3">
         {user ? (
           <div className="flex flex-col gap-2.5">
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl px-3 py-1.5 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <p className="text-[9px] font-bold text-emerald-800 font-mono tracking-wide">CLOUD SYNC ENTIRELY ACTIVE</p>
+            <div className="bg-primary-50 border border-primary-200 rounded-xl px-3 py-1.5 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse"></span>
+              <p className="text-[9px] font-bold text-primary-800 font-mono tracking-wide">CLOUD SYNC ENTIRELY ACTIVE</p>
             </div>
             <div className="flex items-center gap-3">
               {user.photoURL ? (
@@ -109,10 +109,10 @@ export default function ProfileTab({
                   src={user.photoURL} 
                   alt="Profile Avatar" 
                   referrerPolicy="no-referrer"
-                  className="w-11 h-11 rounded-full border-2 border-emerald-100"
+                  className="w-11 h-11 rounded-full border-2 border-primary-100"
                 />
               ) : (
-                <div className="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center font-bold text-emerald-700 text-sm">
+                <div className="w-11 h-11 rounded-full bg-primary-100 flex items-center justify-center font-bold text-primary-700 text-sm">
                   {user.displayName ? user.displayName.slice(0, 2).toUpperCase() : "G"}
                 </div>
               )}
@@ -182,7 +182,7 @@ export default function ProfileTab({
                 />
                 <button 
                   onClick={handleSaveUsername}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-1 text-[10px] rounded cursor-pointer"
+                  className="bg-primary-600 hover:bg-primary-700 text-white font-bold p-1 text-[10px] rounded cursor-pointer"
                 >
                   Save
                 </button>
@@ -229,7 +229,7 @@ export default function ProfileTab({
         </div>
 
         <div className="bg-white rounded-xl border border-slate-150 p-3 flex gap-2.5 items-center">
-          <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center shrink-0">
             <GraduationCap size={16} />
           </div>
           <div>
