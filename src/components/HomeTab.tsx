@@ -32,21 +32,21 @@ export default function HomeTab({
       subtitle: "Match with active aspirants 1-on-1 to practice mock question papers",
       badge: "Partners Online",
       tag: "ossc-peer-room",
-      color: "from-primary-600 via-primary-700 to-indigo-800",
+      color: "from-primary-500 via-primary-600 to-primary-700",
     },
     {
       title: "State OPSC OAS Pair Rooms 🏛️",
       subtitle: "Brainstorm Mains essay answers & state history GK with verified peer experts",
       badge: "Serious Aspirants",
       tag: "opsc-peer-room",
-      color: "from-slate-900 to-primary-950",
+      color: "from-slate-900 via-primary-700 to-primary-600",
     },
     {
       title: "Odia Guru AI Doubts Assistant ✨",
       subtitle: "Get explanations on grammar rules & math shortcuts in native Odia 24/7",
       badge: "AI Grounded",
       tag: "ai",
-      color: "from-primary-900 via-slate-900 to-indigo-950",
+      color: "from-primary-700 via-slate-950 to-primary-600",
     }
   ];
 
@@ -95,8 +95,8 @@ export default function HomeTab({
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-slate-500 uppercase tracking-widest font-mono">Student Workspace</span>
           {user ? (
-            <span className="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded flex items-center gap-1">
-              <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+            <span className="text-xs bg-primary-100 text-primary-800 font-semibold px-2 py-0.5 rounded flex items-center gap-1">
+              <span className="h-1.5 w-1.5 bg-primary-500 rounded-full animate-pulse"></span>
               Profile Verified
             </span>
           ) : (

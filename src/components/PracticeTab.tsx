@@ -133,7 +133,7 @@ export default function PracticeTab({ profile, setProfile }: PracticeTabProps) {
         <div className="flex flex-col gap-4">
           
           {/* Quick instructions indicator */}
-          <div className="bg-gradient-to-r from-primary-50 to-emerald-50/40 border border-primary-100 p-4 rounded-2xl">
+          <div className="bg-gradient-to-r from-primary-50 to-primary-100/30 border border-primary-100 p-4 rounded-2xl">
             <h4 className="text-xs font-bold text-primary-950 uppercase tracking-widest flex items-center gap-1.5">
               <Trophy size={14} className="text-amber-500" />
               State Assessment Rules
@@ -232,16 +232,16 @@ export default function PracticeTab({ profile, setProfile }: PracticeTabProps) {
               if (hasSelectedAny) {
                 if (isOptionSelected) {
                   if (isCorrectOption) {
-                    borderClass = "border-emerald-500 bg-emerald-50 text-emerald-950";
-                    badgeColor = "bg-emerald-500 text-white";
+                    borderClass = "border-primary-500 bg-primary-50 text-primary-950";
+                    badgeColor = "bg-primary-500 text-white";
                   } else {
                     borderClass = "border-rose-500 bg-rose-50 text-rose-950";
                     badgeColor = "bg-rose-500 text-white";
                   }
                 } else if (isCorrectOption) {
                   // Reveal correct answer immediately to enhance pedagogy
-                  borderClass = "border-emerald-300 bg-emerald-50/30 text-emerald-900";
-                  badgeColor = "bg-emerald-500/80 text-white";
+                  borderClass = "border-primary-300 bg-primary-50/30 text-primary-900";
+                  badgeColor = "bg-primary-500/80 text-white";
                 } else {
                   borderClass = "border-slate-100 bg-white/50 text-slate-400";
                   badgeColor = "bg-slate-100 text-slate-400";
@@ -299,7 +299,7 @@ export default function PracticeTab({ profile, setProfile }: PracticeTabProps) {
           <div className="text-4xl animate-bounce pt-2">⭐</div>
           
           <div>
-            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
+            <span className="text-[10px] font-bold text-primary-600 bg-primary-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
               Assessment Completed
             </span>
             <h4 className="text-base font-display font-black text-slate-900 mt-2.5">
@@ -316,7 +316,7 @@ export default function PracticeTab({ profile, setProfile }: PracticeTabProps) {
           </p>
 
           <p className="text-[11px] text-slate-450 leading-relaxed max-w-[250px] mx-auto">
-            You processed {activeQuestions.length} modules, earning <strong className="text-emerald-600 font-extrabold">+{(finalScore * 10) + 10} study minutes</strong> on your personalized progress dashboard.
+            You processed {activeQuestions.length} modules, earning <strong className="text-primary-600 font-extrabold">+{(finalScore * 10) + 10} study minutes</strong> on your personalized progress dashboard.
           </p>
 
           <div className="pt-4 border-t border-slate-100 flex gap-2">

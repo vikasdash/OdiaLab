@@ -213,7 +213,7 @@ In the meantime, feel free to explore our offline mock tests and revision lists.
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-primary-600 to-primary-500 text-white flex items-center justify-center font-bold relative shadow-xs">
             ☕
-            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full border border-white"></span>
+            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-500 rounded-full border border-white"></span>
           </div>
           <div>
             <h4 className="text-xs font-bold text-slate-950">Guru Doubts Assistant</h4>

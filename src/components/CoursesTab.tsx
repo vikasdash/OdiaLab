@@ -193,7 +193,7 @@ export default function CoursesTab({
                       </h4>
                     </div>
                   </div>
-                  <span className="bg-emerald-500 text-white font-mono font-bold text-[8px] tracking-wider px-1.5 py-0.5 rounded animate-pulse shrink-0">
+                  <span className="bg-primary-500 text-white font-mono font-bold text-[8px] tracking-wider px-1.5 py-0.5 rounded animate-pulse shrink-0">
                     MATCHING NOW
                   </span>
                 </div>
@@ -347,7 +347,7 @@ export default function CoursesTab({
                   {/* Live Points rendered simulated */}
                   <svg className="absolute inset-0 pointer-events-none w-full h-full">
                     {points.map((p, i) => (
-                      <circle key={i} cx={p.x} cy={p.y} r={3} fill="#0f9f3e" />
+                      <circle key={i} cx={p.x} cy={p.y} r={3} fill="#26af57" />
                     ))}
                   </svg>
                 </div>
