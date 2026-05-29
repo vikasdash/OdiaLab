@@ -90,8 +90,8 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
         <div 
           className={`bg-white text-slate-900 transition-all duration-300 relative ${
             isFullscreenMode 
-              ? "w-full max-w-4xl h-[92vh] md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl" 
-              : "w-[375px] h-[720px] rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl"
+              ? "w-full max-w-4xl h-[100dvh] md:h-[92vh] rounded-none md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl" 
+              : "w-full md:w-[375px] h-[100dvh] md:h-[720px] rounded-none md:rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl"
           } flex flex-col overflow-hidden`}
         >
           
@@ -181,12 +181,12 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           )}
 
           {/* 3. Screen Scrollable Content Body */}
-          <main className="flex-1 overflow-y-auto bg-slate-50 relative flex flex-col">
+          <main className="flex-1 overflow-y-auto bg-slate-50 relative flex flex-col pb-safe">
             {children}
           </main>
 
           {/* 4. Elegant Glassmorphic Bottom Navigation Tabs */}
-          <nav className="bg-white border-t border-slate-150 px-6 py-4 flex justify-between items-center z-40 shrink-0 select-none relative">
+          <nav className="fixed md:absolute bottom-0 left-0 right-0 w-full bg-white border-t border-slate-150 px-6 py-4 flex justify-between items-center z-40 select-none">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isSelected = activeTab === tab.id;
@@ -214,7 +214,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
 
           {/* Bottom simulated Home Indicator pill */}
           {!isFullscreenMode && (
-            <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-900 rounded-full opacity-20 pointer-events-none z-50"></div>
+            <div className="hidden md:block absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-900 rounded-full opacity-20 pointer-events-none z-50"></div>
           )}
         </div>
 

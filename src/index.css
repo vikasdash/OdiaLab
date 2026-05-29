@@ -54,3 +54,8 @@ html, body, #root {
   padding: 0;
   background-color: #f1f5f9;
 }
+
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 5.5rem);
+}
+
