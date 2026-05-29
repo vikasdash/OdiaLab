@@ -6,18 +6,18 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-primary-50: #f0f9ff; /* Very soft light sky-blue tint */
-  --color-primary-100: #e0f2fe; /* Light sky-blue accent */
-  --color-primary-200: #bae6fd; /* Muted sky border */
-  --color-primary-500: #0ea5e9; /* Vibrant Sky Blue (#0ea5e9) */
-  --color-primary-600: #0284c7; /* Sky blue tone */
-  --color-primary-700: #0369a1; /* Deep ocean blue tone */
+  --color-primary-50: #e8faf4; /* Light Mint background (#e8faf4) */
+  --color-primary-100: #def294; /* Light lime green (#def294) */
+  --color-primary-200: #c1d96c; /* Vibrant leaf lime green (#c1d96c) */
+  --color-primary-500: #53a687; /* Master Brand Teal / Emerald (#53a687) */
+  --color-primary-600: #3d8b6e; /* Dynamic corporate green-teal */
+  --color-primary-700: #24664c; /* Deep focus forest teal */
   
-  --color-accent-50: #fffbeb;
-  --color-accent-100: #fef3c7;
-  --color-accent-500: #f59e0b; /* Vibrant gold-amber star accent */
-  --color-accent-600: #d97706;
-  --color-accent-700: #b45309;
+  --color-accent-50: #fdf6f0;
+  --color-accent-100: #fdf0e6;
+  --color-accent-500: #f2b885; /* Warm golden-apricot accent orange (#f2b885) */
+  --color-accent-600: #de9b60;
+  --color-accent-700: #bd793e;
 }
 
 /* Custom Scrollbar for mobile app feel inside scrollable sheets */
