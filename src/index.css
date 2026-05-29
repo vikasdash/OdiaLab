@@ -6,18 +6,18 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-primary-50: #f0fdf4;
-  --color-primary-100: #dcfce7;
-  --color-primary-200: #bbf7d0;
-  --color-primary-500: #0f9f3e; /* OdiaLab Forest Green */
-  --color-primary-600: #0d8c36; /* OdiaLab Deep Green */
-  --color-primary-700: #14532d; /* Forest Green Dark */
+  --color-primary-50: #f4fbf7;
+  --color-primary-100: #e6f7ef;
+  --color-primary-200: #c2eed9;
+  --color-primary-500: #0ea85e; /* Vibrant, modern educational Mint Forest Green */
+  --color-primary-600: #0b8a4d; /* Dynamic Academic Dark Green */
+  --color-primary-700: #06542f; /* Premium Forest Ash Green */
   
-  --color-accent-50: #fffdf0;
-  --color-accent-100: #fef9c3;
-  --color-accent-500: #f1c40f; /* OdiaLab Doodle Yellow Circle Accent */
-  --color-accent-600: #d4ac0d;
-  --color-accent-700: #a57c00;
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-500: #f59e0b; /* Warm honey gold yellow from the logo circle accent */
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
 }
 
 /* Custom Scrollbar for mobile app feel inside scrollable sheets */

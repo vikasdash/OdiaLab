@@ -127,7 +127,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
           </div>
 
           {/* 2. Sleek Branding Header */}
-          <header className="sticky md:relative top-0 left-0 right-0 px-6 py-4 bg-primary-500 border-b border-primary-650 shrink-0 z-35 flex justify-between items-center text-white">
+          <header className="sticky md:relative top-0 left-0 right-0 px-6 py-4 bg-primary-500 border-b border-primary-600/80 shrink-0 z-35 flex justify-between items-center text-white">
             <div>
               <h1 className="text-2xl font-black text-white tracking-tight font-display flex items-center gap-1.5">
                 OdiaLab
