@@ -57,7 +57,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
   ];
 
   return (
-    <div className="h-[100dvh] md:h-auto min-h-screen overflow-hidden md:overflow-visible bg-[#f1f5f9] flex flex-col items-center justify-center p-0 md:p-6 transition-colors duration-500 font-sans relative">
+    <div className="min-h-screen bg-[#f1f5f9] flex flex-col items-center justify-center p-0 md:p-6 transition-colors duration-500 font-sans relative">
       
       {/* Platform Instructions Banner for Visual Quality Preview - Only shows on desktop/tablet */}
       <div className="hidden md:flex w-full max-w-md items-center justify-between mb-4 px-4 py-2 bg-slate-900 text-white rounded-2xl shadow-sm text-xs border border-slate-800">
@@ -84,14 +84,14 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
       </div>
 
       {/* Side-by-side Layout Grid split: Smartphone Left, Sleek Info desk Right */}
-      <div className="flex flex-row items-center justify-center max-w-5xl w-full gap-12 z-10 h-full md:h-auto">
+      <div className="flex flex-row items-center justify-center max-w-5xl w-full gap-12 z-10">
         
         {/* Main Smartphone Container - Sleek border frame structure */}
         <div 
           className={`bg-white text-slate-900 transition-all duration-300 relative ${
             isFullscreenMode 
-              ? "w-full max-w-4xl h-[100dvh] md:h-[92vh] rounded-none md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl" 
-              : "w-full md:w-[375px] h-[100dvh] md:h-[720px] rounded-none md:rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl"
+              ? "w-full max-w-4xl h-[92vh] md:rounded-[36px] md:ring-12 md:ring-slate-900 shadow-2xl" 
+              : "w-[375px] h-[720px] rounded-[40px] md:border-[8px] md:border-slate-900 shadow-2xl"
           } flex flex-col overflow-hidden`}
         >
           
@@ -214,7 +214,7 @@ export default function AppShell({ children, activeTab, setActiveTab, streak, pr
 
           {/* Bottom simulated Home Indicator pill */}
           {!isFullscreenMode && (
-            <div className="hidden md:block absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-900 rounded-full opacity-20 pointer-events-none z-50"></div>
+            <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-900 rounded-full opacity-20 pointer-events-none z-50"></div>
           )}
         </div>
 
